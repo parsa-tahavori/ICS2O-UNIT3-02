@@ -19,5 +19,5 @@ if (navigator.serviceWorker) {
  * This function displays an alert.
  */
 function myButtonClicked() {
-  document.getElementById("hello-world").innerHTML = "<p>Hello, World!</p>"
+  document.getElementById("calculate-pyramid").innerHTML = "<p>The area is:</p>"
 }
