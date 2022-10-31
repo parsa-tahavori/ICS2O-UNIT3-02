@@ -1,23 +1,21 @@
-// Copyright (c) 2020 Mr. Coxall All rights reserved
+// Copyright (c) 2022 Parsa Tahavori All rights reserved
 //
-// Created by: Mr. Coxall
-// Created on: Sep 2020
+// Created by: Parsa Tahavori
+// Created on: Oct 2022
 // This file contains the JS functions for index.html
 
-"use strict"
-
+'use strict'
 /**
- * Check servie worker.
+ * This function calculates the volume of a pyramid
  */
-if (navigator.serviceWorker) {
-  navigator.serviceWorker.register("/ICS2O-PWA-Test/sw.js", {
-    scope: "/ICS2O-PWA-Test/",
-  })
-}
-
-/**
- * This function displays an alert.
- */
-function myButtonClicked() {
-  document.getElementById("calculate-pyramid").innerHTML = "<p>The area is:</p>"
+function calculate () {
+  // input
+  const length = parseFloat(document.getElementById("length").value)
+  const width= parseFloat(document.getElementById("width").value)
+  const height = parseFloat(document.getElementById("height").value)
+  // process
+  const volume = (length * width * height) / 3
+  // output
+  document.getElementById("volume").innerHTML =
+    "The volume is: " + volume.toFixed(2) + ' mm³' 
 }
